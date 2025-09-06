@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Eazy Cash PRO</title>
+  <link rel="stylesheet" href="assets/css/styles.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script defer src="assets/js/data.js"></script>
+  <script defer src="assets/js/app.js"></script>
+</head>
+<body>
+<div id="global-loader" class="loader hidden">
+  <div class="logo-pulse">
+    <div class="coin"></div>
+    <div class="coin delay"></div>
+    <div class="coin delay2"></div>
+    <div class="brand">
+      <div class="en">Eazy Cash</div>
+      <div class="ar">إيزي كاش</div>
+    </div>
+  </div>
+</div>
+<header class="app-header">
+  <div class="brand-glow">💸 <span>EazyCash</span></div>
+  <div class="header-actions">
+    <button id="langToggle" class="chip" data-i18n="lang">AR</button>
+    <a class="chip ghost" href="login.html" data-i18n="login">Login</a>
+  </div>
+</header>
+<nav class="ticker" id="liveTicker"></nav>
+
+<main class="container">
+  <section class="big-card">
+    <div>
+      <div class="subtext" data-i18n="balance_card_title">الرصيد الحالي</div>
+      <div class="big-num" id="userBalance">EGP 12,540</div>
+      <div class="subtext mt-1" data-i18n="profit_card_title">أرباحك من التجارة</div>
+      <canvas id="earnChart" class="mt-1" style="width:100%;height:120px;"></canvas>
+    </div>
+    <div class="kpis">
+      <div class="kpi">
+        <div class="label" data-i18n="earnings">أرباح مستخدمين</div>
+        <div class="value" id="statEarnings">392,331</div>
+      </div>
+      <div class="kpi">
+        <div class="label" data-i18n="orders">عدد طلبات</div>
+        <div class="value" id="statOrders">84,513</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="actions">
+    <a class="action" href="deposit.html"><div class="ico">💳</div><div data-i18n="actions_deposit">إيداع</div></a>
+    <a class="action" href="withdraw.html"><div class="ico">💸</div><div data-i18n="actions_withdraw">سحب</div></a>
+    <a class="action" href="buy.html"><div class="ico">🟢</div><div data-i18n="actions_buy">شراء</div></a>
+    <a class="action" href="sell.html"><div class="ico">🔴</div><div data-i18n="actions_sell">بيع</div></a>
+    <a class="action" href="trades.html"><div class="ico">📈</div><div data-i18n="actions_trades">صفقاتي</div></a>
+    <a class="action" href="spin.html"><div class="ico">🎰</div><div data-i18n="actions_spin">سبين</div></a>
+    <a class="action" href="vip.html"><div class="ico">⭐</div><div>VIP</div></a>
+    <a class="action" href="leaderboard.html"><div class="ico">🏆</div><div>Leaders</div></a>
+  </section>
+
+  <section class="card neon">
+    <div class="title" data-i18n="market">السوق</div>
+    <div id="sixCoins" class="coin-grid"></div>
+    <div class="mt-2 center"><a class="btn" href="market.html" data-i18n="view_all">عرض الكل</a></div>
+  </section>
+</main>
+
+<footer class="bottom-nav">
+  <a href="index.html" class="nav-item" data-i18n="home">الرئيسية</a>
+  <a href="market.html" class="nav-item">BUY / MKT</a>
+  <a href="payments.html" class="nav-item" data-i18n="payments">سحب/إيداع</a>
+  <a href="profile.html" class="nav-item" data-i18n="profile">الملف</a>
+</footer>
+<div id="toast"></div>
+</body>
+</html>
