@@ -1,56 +1,33 @@
-<!doctype html>
-<html lang="en" dir="ltr">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Eazy Cash PRO</title>
-  <link rel="stylesheet" href="assets/css/styles.css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <script defer src="assets/js/data.js"></script>
-  <script defer src="assets/js/app.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تسجيل الدخول - الأدمن</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="global-loader" class="loader hidden">
-  <div class="logo-pulse">
-    <div class="coin"></div>
-    <div class="coin delay"></div>
-    <div class="coin delay2"></div>
-    <div class="brand">
-      <div class="en">Eazy Cash</div>
-      <div class="ar">إيزي كاش</div>
-    </div>
-  </div>
-</div>
-<header class="app-header">
-  <div class="brand-glow">💸 <span>EazyCash</span></div>
-  <div class="header-actions">
-    <button id="langToggle" class="chip" data-i18n="lang">AR</button>
-    <a class="chip ghost" href="login.html" data-i18n="login">Login</a>
-  </div>
-</header>
-<nav class="ticker" id="liveTicker"></nav>
+  <section class="login-box">
+    <h2>تسجيل دخول الأدمن</h2>
+    <form onsubmit="return checkLogin(event)">
+      <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+      <input type="password" id="password" placeholder="كلمة المرور" required>
+      <button type="submit">دخول</button>
+    </form>
+  </section>
 
-<main class="container">
-  <h2>Login / Register</h2>
-  <div class="card">
-    <label>Email</label>
-    <input class="input" placeholder="you@email.com"/>
-    <label class="mt-2">Password</label>
-    <input class="input" type="password" placeholder="••••••"/>
-    <button class="btn mt-2" onclick="showToast('Logged in ✓')">Login</button>
-    <button class="chip mt-1" onclick="showToast('Register ✓')">Register</button>
-    <div class="mt-2"><button class="chip">Continue with Google</button></div>
-  </div>
-</main>
+  <script>
+    function checkLogin(e) {
+      e.preventDefault();
+      let email = document.getElementById("email").value;
+      let pass = document.getElementById("password").value;
 
-<footer class="bottom-nav">
-  <a href="index.html" class="nav-item" data-i18n="home">الرئيسية</a>
-  <a href="market.html" class="nav-item">BUY / MKT</a>
-  <a href="payments.html" class="nav-item" data-i18n="payments">سحب/إيداع</a>
-  <a href="profile.html" class="nav-item" data-i18n="profile">الملف</a>
-</footer>
-<div id="toast"></div>
+      if(email === "admin@site.com" && pass === "123456") {
+        window.location.href = "admin.html";
+      } else {
+        alert("بيانات غير صحيحة ⚠️");
+      }
+    }
+  </script>
 </body>
 </html>
